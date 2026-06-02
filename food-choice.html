@@ -107,31 +107,25 @@ body{
 
     <div class="options">
 
-        <button class="option"
-            onclick="location.href='activity-choice.html'">
-            🥢 Chinese Food
-        </button>
+       <button class="option" onclick="saveFoodChoice('Chinese Food')">
+    🥢 Chinese Food
+</button>
 
-        <button class="option"
-            onclick="location.href='activity-choice.html'">
-            🍝 Pasta
-        </button>
+<button class="option" onclick="saveFoodChoice('Pasta')">
+    🍝 Pasta
+</button>
 
-        <button class="option"
-            onclick="location.href='activity-choice.html'">
-            🍔 Burgers
-        </button>
+<button class="option" onclick="saveFoodChoice('Burgers')">
+    🍔 Burgers
+</button>
 
-        <button class="option"
-            onclick="location.href='activity-choice.html'">
-            ☕ Cafe Food
-        </button>
+<button class="option" onclick="saveFoodChoice('Cafe Food')">
+    ☕ Cafe Food
+</button>
 
-        <button class="option"
-            onclick="location.href='activity-choice.html'">
-            🍣 Sushi
-        </button>
-
+<button class="option" onclick="saveFoodChoice('Sushi')">
+    🍣 Sushi
+</button>
     </div>
 
     <div class="footer">
@@ -139,6 +133,11 @@ body{
     </div>
 
 </div>
-
+<script>
+function saveFoodChoice(choice) {
+    localStorage.setItem("foodChoice", choice);
+    window.location.href = "activity-choice.html";
+}
+</script>
 </body>
 </html>
