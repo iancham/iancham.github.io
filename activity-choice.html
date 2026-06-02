@@ -138,11 +138,13 @@ body{
     </div>
 
 </div>
+
 <script>
-function saveActivityChoice(choice) {
-    localStorage.setItem("activityChoice", choice);
-    window.location.href = "final-submit.html";
+function saveChoiceAndGo(key, choice, nextPage) {
+    localStorage.setItem(key, choice);
+    window.location.href = nextPage;
 }
 </script>
+
 </body>
 </html>
