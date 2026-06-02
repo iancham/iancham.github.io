@@ -96,42 +96,46 @@ body{
 
 <div class="card">
 
-    <h1 class="header">
-        😔 Ouch... Anyways...
+       <h1 class="header">
+        ouch...anyways,
+        <br>
+        what time shall I pick you up then?
     </h1>
 
-    <p class="subheader">
-        What time shall I pick you up on Saturday?
-    </p>
-
     <div class="question">
-        Choose your preferred timeline ✨
+        pick the timeline that sounds best 
     </div>
 
     <div class="options">
 
-       <button class="option" onclick="savePickupTime('1PM — Lunch & Activity')">
+        <button class="option" onclick="saveChoiceAndGo('pickupTime', '1PM — Lunch & Activity', 'food-choice.html')">
     ☀️ 1PM — Lunch & Activity
 </button>
 
-<button class="option" onclick="savePickupTime('3PM — Activity & Dinner')">
+<button class="option" onclick="saveChoiceAndGo('pickupTime', '3PM — Activity & Dinner', 'food-choice.html')">
     🌤️ 3PM — Activity & Dinner
 </button>
 
-<button class="option" onclick="savePickupTime('4PM — Grocery Shopping + Picnic Dinner')">
+<button class="option" onclick="saveChoiceAndGo('pickupTime', '4PM — Grocery Shopping + Picnic Dinner', 'food-choice.html')">
     🧺 4PM — Grocery Shopping + Picnic Dinner
 </button>
 
-<button class="option" onclick="savePickupTime('6PM — Just Dinner')">
+<button class="option" onclick="saveChoiceAndGo('pickupTime', '6PM — Just Dinner', 'food-choice.html')">
     🌙 6PM — Dinner and Drinks
 </button>
+
     </div>
 
     <div class="footer">
-        choose wisely... your answer may or may not affect my planning stress levels 🫠
+        not to get ahead of myself or anything... 
     </div>
 
 </div>
+<script>
+function saveChoiceAndGo(key, value, nextPage) {
+    localStorage.setItem(key, value);
+    window.location.href = nextPage;
+}
 
 </body>
 </html>
