@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pick-Up Time 💕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Fredoka', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffe4ec,#f5e8ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:100%;
+    max-width:650px;
+    padding:40px;
+    border-radius:32px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    text-align:center;
+    animation:fadeIn .5s ease;
+}
+
+.header{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.subheader{
+    color:#888;
+    margin-bottom:35px;
+}
+
+.question{
+    font-size:1.3rem;
+    margin-bottom:25px;
+}
+
+.options{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.option{
+    background:#f7f0ff;
+    border:none;
+    border-radius:999px;
+    padding:18px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.option:hover{
+    transform:translateY(-3px);
+    background:#ead8ff;
+}
+
+.footer{
+    margin-top:25px;
+    font-size:0.85rem;
+    color:#999;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <h1 class="header">
+        😔 Ouch... Anyways...
+    </h1>
+
+    <p class="subheader">
+        What time shall I pick you up on Saturday?
+    </p>
+
+    <div class="question">
+        Choose your preferred timeline ✨
+    </div>
+
+    <div class="options">
+
+        <button class="option"
+            onclick="location.href='1pm-date.html'">
+            ☀️ 1PM — Lunch & Activity
+        </button>
+
+        <button class="option"
+            onclick="location.href='3pm-date.html'">
+            🌤️ 3PM — Activity & Dinner
+        </button>
+
+        <button class="option"
+            onclick="location.href='4pm-date.html'">
+            🧺 4PM — Grocery Shopping + Picnic Dinner
+        </button>
+
+        <button class="option"
+            onclick="location.href='6pm-date.html'">
+            🌙 6PM — Just Dinner
+        </button>
+
+    </div>
+
+    <div class="footer">
+        choose wisely... your answer may or may not affect my planning stress levels 🫠
+    </div>
+
+</div>
+
+</body>
+</html>
