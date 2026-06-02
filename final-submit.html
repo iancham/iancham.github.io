@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Submit Date Choices 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Fredoka', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffe4ec,#f5e8ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:100%;
+    max-width:650px;
+    padding:40px;
+    border-radius:32px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.header{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.summary{
+    background:#f7f0ff;
+    border-radius:24px;
+    padding:20px;
+    margin-bottom:25px;
+    line-height:1.8;
+}
+
+.option{
+    background:#ead8ff;
+    border:none;
+    border-radius:999px;
+    padding:18px 26px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.option:hover{
+    transform:translateY(-3px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1 class="header">💖 Confirm your date choices</h1>
+
+    <div class="summary">
+        <p><strong>Pick-up Time:</strong> <span id="pickupTime"></span></p>
+        <p><strong>Food:</strong> <span id="foodChoice"></span></p>
+        <p><strong>Activity:</strong> <span id="activityChoice"></span></p>
+    </div>
+
+    <button class="option" onclick="submitChoices()">
+        Submit My Choices ✨
+    </button>
+
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzVTFeULlqru9MoCn1HLxU7spKIX9YOaLjadZIiTbKGak5SYCZFURFsEMocYZZA8fF7/exec";
+
+const pickupTime = localStorage.getItem("pickupTime");
+const foodChoice = localStorage.getItem("foodChoice");
+const activityChoice = localStorage.getItem("activityChoice");
+
+document.getElementById("pickupTime").textContent = pickupTime;
+document.getElementById("foodChoice").textContent = foodChoice;
+document.getElementById("activityChoice").textContent = activityChoice;
+
+function submitChoices() {
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            pickupTime: pickupTime,
+            foodChoice: foodChoice,
+            activityChoice: activityChoice
+        })
+    });
+
+    alert("Choices submitted hehe 💖");
+    localStorage.clear();
+}
+</script>
+
+</body>
+</html>
