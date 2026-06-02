@@ -98,44 +98,45 @@ body{
 <div class="card">
 
     <h1 class="header">
-        😌 So there's hope for you after all...
+        so there's hope for you after all...
         <br>
-        What time shall I pick you up then?
+        what time shall I pick you up then?
     </h1>
 
-    <p class="subheader">
-        Choose your preferred itinerary ✨
-    </p>
-
     <div class="question">
-        Pick the timeline that sounds best 👀
+        pick the timeline that sounds best 
     </div>
 
     <div class="options">
 
-        <button class="option" onclick="savePickupTime('1PM — Lunch & Activity')">
+        <button class="option" onclick="saveChoiceAndGo('pickupTime', '1PM — Lunch & Activity', 'food-choice.html')">
     ☀️ 1PM — Lunch & Activity
 </button>
 
-<button class="option" onclick="savePickupTime('3PM — Activity & Dinner')">
+<button class="option" onclick="saveChoiceAndGo('pickupTime', '3PM — Activity & Dinner', 'food-choice.html')">
     🌤️ 3PM — Activity & Dinner
 </button>
 
-<button class="option" onclick="savePickupTime('4PM — Grocery Shopping + Picnic Dinner')">
+<button class="option" onclick="saveChoiceAndGo('pickupTime', '4PM — Grocery Shopping + Picnic Dinner', 'food-choice.html')">
     🧺 4PM — Grocery Shopping + Picnic Dinner
 </button>
 
-<button class="option" onclick="savePickupTime('6PM — Just Dinner')">
-    🌙 6PM — Just Dinner
+<button class="option" onclick="saveChoiceAndGo('pickupTime', '6PM — Just Dinner', 'food-choice.html')">
+    🌙 6PM — Dinner and Drinks
 </button>
 
     </div>
 
     <div class="footer">
-        not to get ahead of myself or anything... 🫣
+        not to get ahead of myself or anything... 
     </div>
 
 </div>
-
+<script>
+function saveChoiceAndGo(key, value, nextPage) {
+    localStorage.setItem(key, value);
+    window.location.href = nextPage;
+}
+</script>
 </body>
 </html>
