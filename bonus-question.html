@@ -111,19 +111,25 @@ body{
 
     <div class="options">
 
-        <button class="option" onclick="this.innerText='😌 10'">
-            🤔 1 (+9)
-        </button>
-
         <button class="option"
-            onclick="location.href='final-submit.html'">
-            😌 10
-        </button>
+    onclick="saveChoiceAndGo('bonusChoice', '1 (+9)', 'final-submit.html')">
+    🤔 1 (+9)
+</button>
+
+<button class="option"
+    onclick="saveChoiceAndGo('bonusChoice', '10', 'final-submit.html')">
+    😌 10
+</button>
 
     </div>
 
 
 </div>
-
+<script>
+function saveChoiceAndGo(key, value, nextPage) {
+    localStorage.setItem(key, value);
+    window.location.href = nextPage;
+}
+</script>
 </body>
 </html>
