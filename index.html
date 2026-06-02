@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Date Planner 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Fredoka', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffe4ec,#f5e8ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:100%;
+    max-width:600px;
+    padding:40px;
+    border-radius:32px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.header{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.subheader{
+    color:#777;
+    margin-bottom:35px;
+}
+
+.question{
+    font-size:1.3rem;
+    margin-bottom:25px;
+}
+
+.options{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.option{
+    background:#f7f0ff;
+    border:none;
+    border-radius:999px;
+    padding:18px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.option:hover{
+    transform:translateY(-3px);
+    background:#ead8ff;
+}
+
+.footer{
+    margin-top:25px;
+    font-size:0.85rem;
+    color:#999;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- CUSTOMISABLE HEADER -->
+    <h1 class="header">
+        💖 Saturday Date Planner 💖
+    </h1>
+
+    <!-- CUSTOMISABLE SUBHEADER -->
+    <p class="subheader">
+        Help me plan our perfect Saturday (6 June ✨)
+    </p>
+
+    <div class="question">
+        What's your ideal vibe for the day?
+    </div>
+
+    <div class="options">
+
+        <button class="option"
+            onclick="location.href='food-date.html'">
+            🍜 Foodie Adventure
+        </button>
+
+        <button class="option"
+            onclick="location.href='cute-date.html'">
+            ☁️ Cute & Chill
+        </button>
+
+        <button class="option"
+            onclick="location.href='active-date.html'">
+            🚶 Explore & Walk Around
+        </button>
+
+        <button class="option"
+            onclick="location.href='surprise-date.html'">
+            🎲 Surprise Me
+        </button>
+
+    </div>
+
+    <div class="footer">
+        no wrong answers btw 🫶
+    </div>
+
+</div>
+
+</body>
+</html>
