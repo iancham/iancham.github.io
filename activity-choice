@@ -109,33 +109,33 @@ body{
     <div class="options">
 
         <button class="option"
-            onclick="location.href='bowling.html'">
+            onclick="location.href='bonus-question.html'">
             🎳 Bowling
         </button>
 
         <button class="option"
-            onclick="location.href='board-games.html'">
+            onclick="location.href='bonus-question.html'">
             🎲 Board Games / Game Room
         </button>
 
         <button class="option"
-            onclick="location.href='cat-dog-cafe.html'">
+            onclick="location.href='bonus-question.html'">
             🐱 Cat / Dog Cafe
         </button>
 
         <button class="option"
-            onclick="location.href='mini-golf.html'">
+            onclick="location.href='bonus-question.html'">
             ⛳ Mini Golf
         </button>
 
         <button class="option"
-            onclick="location.href='mini-golf.html'">
+            onclick="location.href='bonus-question.html'">
             🌟Tufting
         </button>
     </div>
 
     <div class="footer">
-        choose carefully... this determines how competitive i get 😌
+        choose carefully... this determines how competitive i get 
     </div>
 
 </div>
