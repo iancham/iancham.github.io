@@ -107,23 +107,23 @@ body{
 
     <div class="options">
 
-       <button class="option" onclick="saveFoodChoice('Chinese Food')">
+       <button class="option" onclick="saveChoiceAndGo('foodChoice', 'Chinese Food', 'activity-choice.html')">
     🥢 Chinese Food
 </button>
 
-<button class="option" onclick="saveFoodChoice('Pasta')">
+<button class="option" onclick="saveChoiceAndGo('foodChoice', 'Pasta', 'activity-choice.html')">
     🍝 Pasta
 </button>
 
-<button class="option" onclick="saveFoodChoice('Burgers')">
+<button class="option" onclick="saveChoiceAndGo('foodChoice', 'Burgers', 'activity-choice.html')">
     🍔 Burgers
 </button>
 
-<button class="option" onclick="saveFoodChoice('Cafe Food')">
+<button class="option" onclick="saveChoiceAndGo('foodChoice', 'Cafe Food', 'activity-choice.html')">
     ☕ Cafe Food
 </button>
 
-<button class="option" onclick="saveFoodChoice('Sushi')">
+<button class="option" onclick="saveChoiceAndGo('foodChoice', 'Sushi', 'activity-choice.html')">
     🍣 Sushi
 </button>
     </div>
@@ -134,9 +134,9 @@ body{
 
 </div>
 <script>
-function saveFoodChoice(choice) {
-    localStorage.setItem("foodChoice", choice);
-    window.location.href = "activity-choice.html";
+function saveChoiceAndGo(key, value, nextPage) {
+    localStorage.setItem(key, value);
+    window.location.href = nextPage;
 }
 </script>
 </body>
