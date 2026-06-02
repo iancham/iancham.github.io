@@ -107,30 +107,21 @@ body{
 
     <div class="options">
 
-        <button class="option"
-            onclick="location.href='bonus-question.html'">
-            🎳 Bowling
-        </button>
+       <button class="option" onclick="saveActivityChoice('Bowling')">
+    🎳 Bowling
+</button>
 
-        <button class="option"
-            onclick="location.href='bonus-question.html'">
-            🎲 Board Games / Game Room
-        </button>
+<button class="option" onclick="saveActivityChoice('Board Games / Game Room')">
+    🎲 Board Games / Game Room
+</button>
 
-        <button class="option"
-            onclick="location.href='bonus-question.html'">
-            🐱 Cat / Dog Cafe
-        </button>
+<button class="option" onclick="saveActivityChoice('Cat / Dog Cafe')">
+    🐱 Cat / Dog Cafe
+</button>
 
-        <button class="option"
-            onclick="location.href='bonus-question.html'">
-            ⛳ Mini Golf
-        </button>
-
-        <button class="option"
-            onclick="location.href='bonus-question.html'">
-            🌟Tufting
-        </button>
+<button class="option" onclick="saveActivityChoice('Mini Golf')">
+    ⛳ Mini Golf
+</button>
     </div>
 
     <div class="footer">
@@ -138,6 +129,11 @@ body{
     </div>
 
 </div>
-
+<script>
+function saveActivityChoice(choice) {
+    localStorage.setItem("activityChoice", choice);
+    window.location.href = "final-submit.html";
+}
+</script>
 </body>
 </html>
